@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; }
+        img { width: 200px; height: 150px; object-fit: cover; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+    
+    <div class="gallery">
+        <% if (images.length > 0) { %>
+            <% images.forEach(image => { %>
+                <img src="/images/<%= image %>" alt="Gallery Image">
+            <% }) %>
+        <% } else { %>
+            <p>No images found.</p>
+        <% } %>
+    </div>
+</body>
+</html>
